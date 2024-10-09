@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra seu nome DEV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main class="flex h-screen bg-black text-white">
+        <div class="flex-1 flex justify-center items-center">
+            <img src="img/hacker.png" alt="hacker de capuz">
+        </div>
+        <div class="flex-1 flex flex-col justify-center items-center gap-[100px]">
+            <h1 class="text-[48px] text-center">Descubra seu nome de  <span class="block text-[90px] uppercase bg-gradient-to-b from-[#37C000] to-black bg-clip-text text-transparent">Programador</span></h1>
+            <form class="flex gap-4">
+            <div>
+                <label for="dia" class="block">Digite seu dia</label>
+                <input id="dia" type="number" class="w-[250px] h-[40px] text-black">
+            </div>
+            <div>
+            <label for="mes" class="block">Escolha seu mês</label>
+            <select id="mes"class="w-[250px] h-[40px] text-black">
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+        </div>
+            </form>
+            <button class="w-[150px] h-[40px] text-black font-bold"></button>
+            <h2 class="text-[24px]">Seu nome é <span id="nome" class="block text-[40px]">...</span></h2>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
