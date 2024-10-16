@@ -1,49 +1,63 @@
-function (event){
-    event.preventDefault();
+btn.onclick = () => {
 
-    let meuLabel = document.getElementById("dia");
-    // let meuDisplay = document.getElementById("display");
-    let meuDia = meuInput.value;
+let ultimoDigito =Number(dia.value % 10)
 
-    meuDia = parseFloat(meuDia);
+console.log(ultimoDigito)
+let mesSelecionado = Number(mes.value)
 
-let meuDia = Number(prompt('Digite seu dia'));
+if(Number(dia.value)>=1 && Number(dia.value)<=31){
 
-if (ultimoDigito [1,2]){
-nome = 'Desenvolvedor (a)'
-}else if (ultimoDigito [3, 4, 5]){
-nome = 'Programador(a)'
-}else if (ultimoDigito [6, 7, 8]){
-nome = 'Estagiário(a)'
-}else (ultimoDigito [9,0]);{
-nome = 'Senior(a)'
+    if (ultimoDigito == 1 || ultimoDigito == 2){
+        nome.innerHTML = 'Desenvolvedor (a)'
+    }else if (ultimoDigito >=3 && ultimoDigito <=5){
+        nome.innerHTML = 'Programador(a)'
+    }else if (ultimoDigito >=6 && ultimoDigito <=8){
+        nome.innerHTML = 'Estagiário(a)'
+    }else{
+        nome.innerHTML = 'Senior(a)'
+    }
+    switch(mesSelecionado) {
+        case 1:
+            nome.innerHTML += ' bugado (a)'
+            break;
+        case 2:
+            nome.innerHTML += ' do CTRL C, CTRL V'
+            break
+        case 3:
+            nome.innerHTML += ' das gambiarras'
+            break
+        case 4:
+            nome.innerHTML += ' que culpa o cache'
+            break
+        case 5:
+            nome.innerHTML += ' que esquece o que faz '
+            break
+        case 6:
+            nome.innerHTML += ' do git vazio'
+            break
+        case 7:
+            nome.innerHTML += ' das try/ catch vazia'
+            break
+        case 8:
+            nome.innerHTML += ' famosinho do Linkedin'
+            break
+        case 9:
+            nome.innerHTML += ' caçador de Bugs'
+            break
+        case 10:
+            nome.innerHTML += ' do windows pirata'
+            break
+        case 11:
+            nome.innerHTML += ' do Update sem where'
+            break
+        case 12:
+            nome.innerHTML += ' do commit bugado'
+            break
+    }
+} else {
+    alert('Digite um dia valido');
+    dia.value =''
 }
 
-let meuLabel = document.getElementById("mes");
-let meuMes = meuInput.value;
 
-if (meuMes === janeiro){
-    nome += 'bugado(a)'
-    }else if (meuMes === 'fevereiro'){
-    nome += 'do CTRL C, CTROL V'
-    }else if (meuMes === 'março'){
-    nome += 'das gambiarras'
-    }else if (meuMes === 'abril'){
-    nome += 'Que culpa os cache'
-    }else if (meuMes === 'maio'){
-    nome += 'que esquece o que faz'
-    }else if (meuMes === 'junho'){
-    nome += 'do git vazio'
-    }else if (meuMes === 'julho'){
-    nome += 'das try/catch vazia'
-    }else if (meuMes === 'agosto'){
-    nome += 'famosinho do linkedin'
-    }else if (meuMes === 'setembro'){
-    nome += 'caçador de bugs'
-    }else if (meuMes === 'outubro'){
-    nome += 'do windows pirata'
-    }else if (meuMes === 'novembro'){
-    nome += 'do update sem where'
-    }else (meuMes === 'dezembro');{
-    nome += 'do commit bugado'
-    }}
+}
